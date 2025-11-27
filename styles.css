@@ -1,0 +1,394 @@
+/* --- Global Reset and Fonts --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #004d99; /* KSBC Brand Blue */
+}
+
+nav a {
+    margin-left: 30px;
+    font-weight: 600;
+    color: #555;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9900; /* Brand Accent Gold/Orange */
+}
+
+.cta-button-nav {
+    background-color: #ff9900;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-left {
+    flex: 1;
+    padding-right: 50px;
+}
+
+.headline {
+    font-size: 48px;
+    font-weight: 700;
+    color: #004d99;
+    margin-bottom: 20px;
+}
+
+.subheadline {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cta-group button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    margin-right: 15px;
+}
+
+.cta-button.primary {
+    background-color: #ff9900;
+    color: white;
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid #004d99;
+    color: #004d99;
+}
+
+.cta-group button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* --- E-book Cover Placeholder --- */
+.content-right {
+    flex: 0 0 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.ebook-cover-placeholder {
+    width: 250px;
+    height: 350px;
+    background-color: #004d99;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* --- Social Links --- */
+.social-links {
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: #004d99;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff9900;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
+/* --- Responsive Adjustments (for smaller screens) --- */
+@media (max-width: 768px) {
+    .navbar, .hero-section {
+        padding: 20px 30px;
+    }
+    
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .content-left {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .headline {
+        font-size: 36px;
+    }
+
+    nav {
+        display: none; /* Hide nav links on mobile for simplicity */
+    }
+    
+    .cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-group button {
+        margin-right: 0;
+    }
+
+    .social-links {
+        justify-content: center;
+        display: flex;
+    }
+}
+/* --- NEW CSS for Stacked Logo Look --- */
+
+.logo-container {
+    display: flex;
+    flex-direction: column; /* चिन्ह आणि टेक्स्टला उभ्या मांडणीत (Vertical Stack) आणते */
+    align-items: center; /* लोगोला मध्यभागी (Center) ठेवते */
+    line-height: 1; /* चिन्ह आणि टेक्स्टमधील अंतर कमी करते */
+    margin-left: 10px; /* हेडरच्या डाव्या बाजूला थोडे अंतर सोडते */
+}
+
+.header-icon {
+    /* लोगोच्या चिन्हाचा आकार वाढवा */
+    height: 45px; 
+    width: auto;
+    margin-bottom: 2px; /* चिन्हाखाली लहान गॅप */
+}
+
+.logo-text {
+    /* कंपनीच्या नावासाठी स्टाईल */
+    font-size: 14px; 
+    font-weight: 600;
+    color: #004d99; /* KSBC ब्रँड ब्लू */
+    letter-spacing: 0.5px; /* टेक्स्ट अधिक आकर्षक दिसावा यासाठी */
+}
+
+/* जुन्या '.header-logo' स्टाईलमुळे समस्या येणार नाही याची खात्री करा */
+/* जर जुनी .header-logo स्टाईल कार्यरत असेल, तर ती काढून टाका */
+/* --- About Us Section Styling --- */
+
+.about-section {
+    padding: 100px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    color: #004d99;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #ff9900; /* आकर्षक अंडरलाईन */
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.about-section h3 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about-image-container {
+    flex: 0 0 350px; /* रुंदी निश्चित करा */
+    display: flex;
+    justify-content: center;
+}
+
+.about-author-image {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2);
+    border: 5px solid white; /* फ्रेम इफेक्ट */
+}
+
+/* --- Mobile Adjustments for About Us --- */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 50px 30px;
+        text-align: center;
+    }
+    .about-image-container {
+        order: -1; /* मोबाईलवर फोटो मजकूराच्या वर दिसेल */
+        margin-bottom: 30px;
+    }
+    .about-author-image {
+        width: 250px;
+        height: 300px;
+    }
+    .about-section h2 {
+        display: block;
+        border-bottom: none;
+    }
+}
+/* --- Contact Section Styling (Form) --- */
+.contact-section {
+    padding: 80px 80px;
+    text-align: center;
+    background-color: #004d99; /* Brand Blue Background */
+    color: white;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.signup-form input[type="email"] {
+    padding: 15px;
+    width: 350px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.signup-form button {
+    /* Primary CTA Button style already defined */
+    padding: 15px 30px;
+}
+
+
+/* --- Footer Styling --- */
+.footer {
+    padding: 30px 80px;
+    background-color: #333;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links-footer a {
+    color: white;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.social-links-footer a:hover {
+    color: #ff9900; /* Brand Accent Gold/Orange */
+}
+
+/* --- Mobile Adjustments for Contact/Footer --- */
+@media (max-width: 768px) {
+    .signup-form {
+        flex-direction: column;
+    }
+    .signup-form input[type="email"] {
+        width: 100%;
+        max-width: 350px;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .social-links-footer {
+        margin-top: 10px;
+    }
+}
+/* --- New E-book Cover Image Styling --- */
+.ebook-cover-image {
+    /* जुन्या Placeholder DIV चे आकारमान (Dimensions) वापरा */
+    width: 250px; 
+    height: 350px;
+    object-fit: cover; /* इमेज योग्यरित्या भरावी यासाठी */
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* जुन्या Placeholder स्टाईलची आता गरज नाही */
+.ebook-cover-placeholder {
+    display: none; /* जुना Placeholder आता दिसणार नाही */
+}
+
+/* तुम्हाला .content-right स्टाईलमध्ये कोणताही बदल करण्याची गरज नाही */
